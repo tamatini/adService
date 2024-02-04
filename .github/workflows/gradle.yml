@@ -23,6 +23,10 @@ jobs:
       run: |
         apt install ca-certificates
 
+    - name: Make Gradle wrapper executable
+      run: |
+        chmod +x gradlew
+
     - name: Download Repos
       run: |
         ./gradlew downloadRepos
