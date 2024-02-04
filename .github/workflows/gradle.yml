@@ -14,6 +14,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: 
+      image: eclipse-temurin:21@sha256:9d007c093e624bc410f113ee09f5209d3263e0bada7524e4de99eac9fbef06a5
+      options: --user root
     steps:
     - uses: actions/checkout@v3
     - name: Create certificate
